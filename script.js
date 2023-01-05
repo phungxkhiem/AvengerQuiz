@@ -8,7 +8,7 @@ const quizResults = document.getElementById('Quiz-Results');
 var numberOfQuestionsAnswered = 0;
 var numbersOfQuestionsRight = 0;
 
-var time = 5 * 60, // timer code
+var time = 5 * 60,
   start = Date.now(),
   mins = document.getElementById('minutes'),
   secs = document.getElementById('seconds'),
@@ -53,7 +53,7 @@ function setNextQuestion() {
     showQuestion(shuffledQuestions[currentQuestionIndex])
   }
   
-  function showQuestion(question) { // show question code
+  function showQuestion(question) { 
     questionElement.innerText = question.question
     question.answers.forEach(answer => {
       const button = document.createElement('button')
@@ -69,7 +69,7 @@ function setNextQuestion() {
   
   
   
-  function selectAnswer(e) { // select answer code
+  function selectAnswer(e) { 
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
     if (correct === 'true' ){
@@ -106,8 +106,7 @@ function setNextQuestion() {
   
   
   function resetState() {
-    // var finalScoreEl = document.getElementById('final-score')
-    // finalScoreEl.textContent = time
+  
   
     clearStatusClass(document.body)
     nextButton.classList.add('hide')
@@ -116,7 +115,7 @@ function setNextQuestion() {
     }
   }
   
-  const questions = [ // list of questions 
+  const questions = [ 
     {
       question: 'What was the first Marvel movie?',
       answers: [
